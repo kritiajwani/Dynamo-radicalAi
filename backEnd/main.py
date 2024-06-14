@@ -3,6 +3,8 @@ from pydantic import BaseModel, HttpUrl
 import os
 import certifi
 
+from fastapi.middleware.cors import CORSMiddleware
+
 # Ensure certifi's certificates are used
 os.environ["SSL_CERT_FILE"] = certifi.where()
 
@@ -10,6 +12,16 @@ class videoAnalysisReq(BaseModel):
     youtube_link: HttpUrl
 
 app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+
 
 @app.post("/analyze_video")
 def analyze_video(request: videoAnalysisReq):
