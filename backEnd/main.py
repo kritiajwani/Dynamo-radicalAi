@@ -5,10 +5,15 @@ import certifi
 
 from fastapi.middleware.cors import CORSMiddleware
 
+from services.genai import (
+    YoutubeProcessor,
+    Geminiprocessor
+)
+
 # Ensure certifi's certificates are used
 os.environ["SSL_CERT_FILE"] = certifi.where()
 
-class videoAnalysisReq(BaseModel):
+class VideoAnalysisReq(BaseModel):
     youtube_link: HttpUrl
 
 app = FastAPI()
@@ -21,29 +26,19 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-
-
 @app.post("/analyze_video")
-def analyze_video(request: videoAnalysisReq):
-    # analysis here:
-    from langchain_community.document_loaders import YoutubeLoader
-    from langchain.text_splitter import RecursiveCharacterTextSplitter
+def analyze_video(request: VideoAnalysisReq):
+    # Analysis here
+    processor = YoutubeProcessor()
+    result = processor.retrieve_youtube_documents(str(request.youtube_link), verbose=True)
 
-    loader = YoutubeLoader.from_youtube_url(str(request.youtube_link), add_video_info=True)
-    docs = loader.load()
-    print(f"On load {type(docs)}")
-    text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=0)
-    result = text_splitter.split_documents(docs)
+    genai_processor = Geminiprocessor(
+        model_name="gemini-pro",
+        project="mission-dynamo-426221"
+    )
 
-    print(f"{type(result)}")
-    author = result[0].metadata["author"]
-    length = result[0].metadata["length"]
-    title = result[0].metadata["title"]
-    total_size = len(result)
+    summary = genai_processor.generate_document_summary(result, verbose=True)
 
     return {
-        "author": author,
-        "length": length,
-        "title": title,
-        "total_size": total_size
+       "summary": summary
     }
