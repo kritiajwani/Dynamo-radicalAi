@@ -7,7 +7,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from services.genai import (
     YoutubeProcessor,
-    Geminiprocessor
+    GeminiProcessor
 )
 
 # Ensure certifi's certificates are used
@@ -26,19 +26,27 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-@app.post("/analyze_video")
-def analyze_video(request: VideoAnalysisReq):
-    # Analysis here
-    processor = YoutubeProcessor()
-    result = processor.retrieve_youtube_documents(str(request.youtube_link), verbose=True)
-
-    genai_processor = Geminiprocessor(
+genai_processor = GeminiProcessor(
         model_name="gemini-pro",
         project="mission-dynamo-426221"
     )
 
-    summary = genai_processor.generate_document_summary(result, verbose=True)
+@app.post("/analyze_video")
+def analyze_video(request: VideoAnalysisReq):
+    # Analysis here
+
+    
+
+    processor = YoutubeProcessor(genai_processor = genai_processor)
+    result = processor.retrieve_youtube_documents(str(request.youtube_link), verbose=True)
+
+    
+
+    #summary = genai_processor.generate_document_summary(result, verbose=True)
+
+    # find key concepts
+    key_concepts = processor.find_key_concepts(result, verbose=True)
 
     return {
-       "summary": summary
+       "key_concepts": key_concepts
     }
