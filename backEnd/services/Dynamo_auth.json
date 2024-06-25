@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "mission-dynamo-426221",
+  "private_key_id": "b89514581e07cb8ee2ba67385a3fe9f59924ba07",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDE42uyyTUCCMGp\n/MnMNnQ/KqUdF1lcsQY4CMhtzoUwa72gbdB68rM/lqRdCCkVcnmhTgl5rWjiX4qj\n0+jhFPWzdoI4Q9A56NKFHQ5el09Vc3FDYi6Ez7vjwyYnuQmcRFF3xlQ3sLCZO7he\nz1HXcdHPqngqzJCXogJF0RaBbHtVlixkd+pLQb53p0JdnXDQ1BmBLfFecS0oO3hf\nnmQ5Q+Fp4jzFowa6wMMbIxhZmLofSVOcEykXLWXTGR/E8FHDD9Kw2PMpczZARVuD\nb0FQO/VPu/tJZUcxJ7+nBsHvvchEEnB83PufnCw/qkGz4ngVdYxQojVmkLBH2YjI\n3NbjKbQDAgMBAAECggEARYuDJjK2G5LWPWICMbTmWM2KZv0xXnFVHgPUMB0rpI/Z\n+knvww3pTMO8KPRR9rZpyhVTeXxMOPHAed/HOYH6y7pHgvJJIbtgaQ57XeQabLeL\nQV7zyYvK9UegOZW9lEn5cNJIOyeZKXcTx8F5Sh11G+I98fgx9q2OGfUh+vNDmVYE\nGRILYr3hhs+XMjhmKGsSLkaFamww4ahm2uWytRKyjYSTk8TojT2YrZia3LNWJuBK\n2GgMl7c02C7H5duVaNFIIzJvBRGyP6k8kHIlAeYQkDI4cNAcTuIVJjIke0xFMbFy\nBmScba16hScGG0qG28jKe7N6SWYK8H3aCC4R7HgrOQKBgQDzQb/Xs3Ub91GeCvYv\nP2dXnNJoeFtE0nDKAK1GIyOzMiQgcJgwfp3UCK/MrWOfzsbLweEvkPk9llO2C8tB\nUkCJhjg6D09UJY663+G3Ci1j+22EcqzuFDFpend9E4aHcJAyA2gWRqWVZfrQyaOf\npNR3DEOPc3FK/Vky+eAErP1+JwKBgQDPM9Yi7d3zKuScIWE9HQdMIlhraqmpJZgo\nrYUABSVfCjkjgWp4QXFrRXB4dRlpx9clAx0pfSNDowOKVu/3zuxnc4Vk9hShL26k\nsJ3V9aXKpOfGuiNaBSBQwI5mHsU4d1Z0T3hs9VMVM3zdyQ0RdKW/NpGbd6LyhFdS\nygVj+49gxQKBgFy4Lvt0t6qVNlLbMsMHk8hdSgXv+jndTIhygZk+Q5lF/2cuA5RY\nbqgnN3r4jASZuERp/f83bwj+h6HYFP0s8NR6iGv48e/M8P5h35L5GhwF9dSKMUf+\nAmeF+o1+J8TwLsYhbkcvXmX3nQaAFRIArctCrW28Pu6qapl3jN+7YFP5AoGALO39\nmhdgUHFVnzFxx3G6+lxcNfasEXyQcQmnVGjJQMGTwEo4zxjJwkwNZmFmAFUQJvt0\n4GE9O1Zm1yGg6WhaRNh87Xaa5JTHdjjCEPoyWC3IAISuU7/W0QvgFO7JL0RZX+E3\nqNDNkkRW6DTHe6iCpGLt0ftwPwxJby9VWefboE0CgYABcXFsMFWziJHmWFpFStaN\nL+U1RV0CGijRv7n8yEHNx7UuEbz9rotwKe0LQDIzL+b00fe5WlzbTc4NasE6GmHn\n5Fj/NluYUEl6oBYP1jWpzeyUIcDhsW1VKhHY/NmDWvk/jwp2Bl3bH72SIuQ8pKFd\nNXefwelx0UrxkIfqsweRww==\n-----END PRIVATE KEY-----\n",
+  "client_email": "mission-dynamo@mission-dynamo-426221.iam.gserviceaccount.com",
+  "client_id": "102156586963494047089",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/mission-dynamo%40mission-dynamo-426221.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
